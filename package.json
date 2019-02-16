@@ -1,0 +1,38 @@
+{
+  "name": "use-media-query-hook",
+  "version": "0.0.1",
+  "description": "use-media-query hook",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "rollup index.js --file lib/index.js --format cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloluis/use-media-query-hook.git"
+  },
+  "keywords": [
+    "react",
+    "react-hook",
+    "media-query",
+    "media-query-string",
+    "MediaQueryList",
+    "matchMedia"
+  ],
+  "author": "Carloluis Rodríguez <carloluisr@gmail.com> (https://github.com/carloluis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carloluis/use-media-query-hook/issues"
+  },
+  "homepage": "https://github.com/carloluis/use-media-query-hook#readme",
+  "peerDependencies": {
+    "react": "^16.8.2"
+  },
+  "devDependencies": {
+    "rollup": "^1.2.1"
+  }
+}
