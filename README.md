@@ -14,11 +14,11 @@ import React from 'react';
 import useMediaQuery from 'use-media-query';
 
 const App = () => {
-  const isMobile = useMediaQuery('(min-width: 425px)')
+  const isMobile = useMediaQuery('(max-width: 425px)')
   return (
-    <div>
-      { isMobile? 📱: 💻 }
-    </div>
+    <h1>
+      { isMobile ? '📱' : '💻' }
+    </h1>
   );
 }
 ```
