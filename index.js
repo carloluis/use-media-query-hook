@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 
-const mediaQueries = {};
-
 /**
  * React hook to check when a valid media-query-string changes
  * (i.e. when the media query test starts or stops evaluating to true)
@@ -13,22 +11,15 @@ function useMediaQuery(mediaQueryString) {
   const [queryMatch, setQueryMatch] = useState(null);
 
   useEffect(() => {
-    function setMediaQueryMatchesHandler(e) {
-      setQueryMatch(e.matches);
-    }
+    const setMediaMatchHandler = e => setQueryMatch(e.matches);
 
-    if (!mediaQueries[mediaQueryString]) {
-      mediaQueries[mediaQueryString] = window.matchMedia(mediaQueryString);
-    }
+    const mediaQueryList = window.matchMedia(mediaQueryString);
 
-    const mediaQuery = mediaQueries[mediaQueryString];
+    setMediaMatchHandler(mediaQueryList);
 
-    mediaQuery.addListener(setMediaQueryMatchesHandler);
+    mediaQueryList.addListener(setMediaMatchHandler);
 
-    setMediaQueryMatchesHandler(mediaQuery);
-
-    return () =>
-      mediaQuery.removeListener(setMediaQueryMatchesHandler);
+    return () => mediaQueryList.removeListener(setMediaMatchHandler);
   }, [mediaQueryString]);
 
   return queryMatch;
