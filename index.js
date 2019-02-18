@@ -28,7 +28,7 @@ function useMediaQuery(mediaQueryString) {
     setMediaQueryMatchesHandler(mediaQuery);
 
     return () =>
-      mediaQuery.removeListener(mediaQueryString, setMediaQueryMatchesHandler);
+      mediaQuery.removeListener(setMediaQueryMatchesHandler);
   }, [mediaQueryString]);
 
   return queryMatch;
