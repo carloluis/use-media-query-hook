@@ -1,8 +1,9 @@
 {
   "name": "use-media-query-hook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React custom hook to check when a media query result changes",
-  "main": "lib/index.js",
+  "main": "index.js",
+  "cjs": "lib/index.js",
   "umd": "dist/index.js",
   "module": "es/index.js",
   "files": [
@@ -37,7 +38,7 @@
   },
   "homepage": "https://github.com/carloluis/use-media-query-hook#readme",
   "peerDependencies": {
-    "react": "^16.8.2"
+    "react": "^16.8.0"
   },
   "devDependencies": {
     "rollup": "^1.2.1"
