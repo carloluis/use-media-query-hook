@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "description": "use-media-query hook",
   "main": "lib/index.js",
+  "umd": "dist/index.js",
+  "module": "es/index.js",
   "files": [
+    "dist",
+    "es",
     "lib",
     "index.js"
   ],
   "scripts": {
-    "prebuild": "rm -rf lib",
-    "build": "rollup index.js --file lib/index.js --format cjs"
+    "prebuild": "rm -rf dist es lib",
+    "build": "rollup --config"
   },
   "repository": {
     "type": "git",
