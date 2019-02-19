@@ -1,9 +1,8 @@
 {
   "name": "use-media-query-hook",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React custom hook to check when a media query result changes",
-  "main": "index.js",
-  "cjs": "lib/index.js",
+  "main": "lib/index.js",
   "umd": "dist/index.js",
   "module": "es/index.js",
   "files": [
@@ -13,8 +12,8 @@
     "index.js"
   ],
   "scripts": {
-    "prebuild": "rm -rf dist es lib",
-    "build": "rollup --config"
+    "prebuild": "rimraf dist es lib",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -41,6 +40,7 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
+    "rimraf": "^2.6.3",
     "rollup": "^1.2.1"
   }
 }
