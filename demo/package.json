@@ -1,0 +1,48 @@
+{
+  "name": "use-media-query-hook-demo",
+  "version": "1.0.0",
+  "description": "use-media-query-hook demo",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "webpack-dev-server --env.NODE_ENV=develoment --hot",
+    "build": "webpack --env.NODE_ENV=production",
+    "prebuild": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloluis/use-media-query-hook.git"
+  },
+  "keywords": [
+    "react",
+    "react-hook",
+    "media-query",
+    "media-query-string",
+    "use-media-query-hook",
+    "demo"
+  ],
+  "author": "Carloluis Rodríguez <carloluisr@gmail.com> (https://github.com/carloluis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carloluis/use-media-query-hook/issues"
+  },
+  "homepage": "https://github.com/carloluis/use-media-query-hook#readme",
+  "dependencies": {
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "use-media-query-hook": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
