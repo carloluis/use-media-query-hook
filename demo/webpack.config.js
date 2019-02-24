@@ -67,6 +67,7 @@ module.exports = env => {
     plugins: [
       new HtmlWebpackPlugin({
         template: path.join(PATHS.src, 'index.html'),
+        favicon: path.join(PATHS.src, 'favicon.ico'),
         inject: true
       }),
       new MiniCssExtractPlugin({
