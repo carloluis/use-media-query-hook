@@ -20,7 +20,7 @@ body {
 .option input,
 .option button {
   font-weight: 500;
-  margin: 4px auto;
+  margin: 8px auto;
 }
 
 .option input {
@@ -41,6 +41,15 @@ input:focus {
 .option button {
   cursor: pointer;
   height: 21px;
+}
+
+.github {
+  text-decoration: none;
+  font-size: 0.7rem;
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (min-width: 222px) {

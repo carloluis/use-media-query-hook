@@ -34,6 +34,14 @@ const App = () => {
         />
         <button onClick={() => setMediaStr(value)}>Update media query</button>
       </div>
+      <a
+        className={styles.github}
+        title="GitHub project: use-media-query-hook"
+        href="https://github.com/carloluis/use-media-query-hook"
+        target="_blank"
+      >
+        use-media-query-hook
+      </a>
     </React.Fragment>
   );
 };
