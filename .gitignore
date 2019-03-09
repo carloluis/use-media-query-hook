@@ -1,6 +1,7 @@
 .vscode
 node_modules
 dist
+coverage
 es
 lib
 *.tgz
