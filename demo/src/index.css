@@ -1,5 +1,5 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,4 +9,49 @@ body {
 .emoji {
   font-size: 10rem;
   text-align: center;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option input,
+.option button {
+  font-weight: 500;
+  margin: 4px auto;
+}
+
+.option input {
+  width: 90%;
+  line-height: 1.5rem;
+  border: 1px solid green;
+}
+
+.option input.dirty {
+  border: 1px solid pink;
+}
+
+input:focus {
+  outline-offset: 0;
+  outline: none;
+}
+
+.option button {
+  cursor: pointer;
+  height: 21px;
+}
+
+@media (min-width: 222px) {
+  .option input {
+    width: 200px;
+  }
+}
+
+@media (min-width: 400px) {
+  .option input {
+    width: 50%;
+    min-width: 200px;
+  }
 }

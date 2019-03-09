@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import useMediaQuery from 'use-media-query-hook';
 
 import styles from './index.css';
 
-const Demo = () => {
-  const isMobile = useMediaQuery('(max-width: 425px)');
+const DEFAULT_MEDIA_QUERY_STR = '(max-width: 425px)';
 
-  console.info(`%c${isMobile ? '📱' : '💻'}`, 'font-size: 32px');
+const Demo = ({ mediaQueryString }) => {
+  const match = useMediaQuery(mediaQueryString);
 
-  return <h1 className={styles.emoji}>{isMobile ? '📱' : '💻'}</h1>;
+  console.info(`${mediaQueryString} -> ${match}`);
+  console.info(`%c${match ? '📱' : '💻'}`, 'font-size: 32px');
+
+  return <h1 className={styles.emoji}>{match ? '📱' : '💻'}</h1>;
 };
 
-ReactDOM.render(<Demo />, document.querySelector('#app'));
+const App = () => {
+  const [mediaStr, setMediaStr] = useState(DEFAULT_MEDIA_QUERY_STR);
+  const [value, setValue] = useState(DEFAULT_MEDIA_QUERY_STR);
+
+  const inputClassname = mediaStr !== value ? styles.dirty : undefined;
+
+  return (
+    <React.Fragment>
+      <Demo mediaQueryString={mediaStr} />
+      <div className={styles.option}>
+        <input
+          className={inputClassname}
+          type="text"
+          title="Media query string to check when mobile emoji is shown"
+          value={value}
+          onChange={e => setValue(e.target.value)}
+        />
+        <button onClick={() => setMediaStr(value)}>Update media query</button>
+      </div>
+    </React.Fragment>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector('#app'));
