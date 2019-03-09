@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{4:function(e,n,o){e.exports={emoji:"src-index__emoji"}},5:function(e,n,o){"use strict";o.r(n);var c=o(0),t=o.n(c),a=o(2),r=o.n(a),i=o(3),s=o(4),p=o.n(s);r.a.render(t.a.createElement(function(){var e=Object(i.a)("(max-width: 425px)");return console.info("%c".concat(e?"📱":"💻"),"font-size: 32px"),t.a.createElement("h1",{className:p.a.emoji},e?"📱":"💻")},null),document.querySelector("#app"))}},[[5,1,2]]]);
-//# sourceMappingURL=main.770e1751704d6f1790c7.js.map

@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.src-index__emoji {
+  font-size: 10rem;
+  text-align: center;
+}
+
+.src-index__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.src-index__option input,
+.src-index__option button {
+  font-weight: 500;
+  margin: 8px auto;
+}
+
+.src-index__option input {
+  width: 90%;
+  line-height: 1.5rem;
+  border: 1px solid green;
+}
+
+.src-index__option input.src-index__dirty {
+  border: 1px solid pink;
+}
+
+input:focus {
+  outline-offset: 0;
+  outline: none;
+}
+
+.src-index__option button {
+  cursor: pointer;
+  height: 21px;
+}
+
+.src-index__github {
+  text-decoration: none;
+  font-size: 0.7rem;
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 222px) {
+  .src-index__option input {
+    width: 200px;
+  }
+}
+
+@media (min-width: 400px) {
+  .src-index__option input {
+    width: 50%;
+    min-width: 200px;
+  }
+}
+
+
+/*# sourceMappingURL=main.17f73da611f542324be6.css.map*/
